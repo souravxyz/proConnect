@@ -1,136 +1,83 @@
-# 📝 Mini LinkedIn-like Community Platform API
+# 🌐 ProConnect — Mini LinkedIn-like Community Platform
 
-A Node.js + Express RESTful API for a professional community platform inspired by LinkedIn — featuring user authentication, profile management, public post feeds, and secure media uploads. Built using MongoDB with full Swagger/OpenAPI documentation.
+A fullstack professional networking platform inspired by LinkedIn. Built using **Node.js**, **Express**, **MongoDB**, and **React** — it enables user authentication, public posts, profile editing, and secure media uploads.
 
----
-
-## 🚀 Features
-
-### 👤 User & Authentication
-
-- **Signup with Email Verification**  
-  Register with secure email confirmation via Brevo SMTP.
-
-- **JWT-based Login**  
-  Stateless authentication using JSON Web Tokens.
-
-- **Forgot/Reset Password**  
-  Reset password via secure email link.
-
-- **Profile Management**  
-  View and update profile (name, bio, and profile picture).
-
-- **Roles**  
-  Role-based logic for `user` and `admin`.
+Live Demo:
+- 🔗 Frontend: [proconnect.vercel.app](https://pro-connect-cdbh9vtbl-souravs-projects-8b5fe9f7.vercel.app)
+- 🔗 Backend: [proconnect-backend.onrender.com](https://proconnect-backend-7dxu.onrender.com)
 
 ---
 
-### 📝 Public Feed & Posts
+## ✨ Features
 
-- **Create Posts**  
-  Authenticated users can create text-only posts.
+### 👤 Authentication & Users
+- ✅ Email signup with **verification via Brevo**
+- 🔐 Secure **JWT-based login**
+- 🔁 **Forgot & Reset password** via email
+- 📝 Profile management (bio, name, profile picture)
+- 🛡️ Role-based structure (user/admin)
 
-- **Home Feed**  
-  Publicly viewable feed of all posts with author's name & timestamp.
+### 📝 Posts & Feed
+- 📢 Create and view public posts
+- 🧾 View user profiles with all their posts
+- 📸 Upload profile pictures via **Cloudinary**
 
-- **User Profiles**  
-  View any user’s public profile and their posts.
-
-- **Profile Picture Uploads**  
-  (Optional) Upload profile pictures using Multer + Cloudinary.
-
----
-
-### 📘 API Documentation
-
-- Swagger UI available at [`/api-docs`](http://localhost:6969/api-docs)
-- Fully described using OpenAPI 3.0 (`swagger.yaml`)
+### 🧪 Developer Tools
+- 📄 Fully documented with **Swagger UI**
+- ✅ Cookie-based auth for secure frontend/backend integration
+- 📁 MVC structured backend
 
 ---
 
-## 🧰 Tech Stack
-
-| Layer         | Tech                         |
-| ------------- | ---------------------------- |
-| Backend       | Node.js, Express.js          |
-| Database      | MongoDB + Mongoose           |
-| Authentication| JWT, Bcrypt                  |
-| Email         | Brevo SMTP (Verify & Reset)  |
-| File Upload   | Multer, Cloudinary           |
-| Docs          | Swagger / OpenAPI 3.0        |
-
----
-
-## 📁 Project Structure
-
-mini-linkedin-api/
-├── app/
-│ ├── config/
-│ │ ├── db.js
-│ │ ├── email.js
-│ │ ├── cloudinary.js
-│ │ └── swagger.js
-│ ├── controllers/
-│ │ ├── authController.js
-│ │ ├── userController.js
-│ │ └── postController.js
-│ ├── middleware/
-│ │ ├── auth.js
-│ │ ├── upload.js
-│ ├── models/
-│ │ ├── User.js
-│ │ └── Post.js
-│ ├── routes/
-│ │ ├── authRoutes.js
-│ │ ├── userRoutes.js
-│ │ ├── postRoutes.js
-├── uploads/ # Temp folder for uploads
-├── docs/
-│ └── swagger.yaml
-├── .env
-├── app.js
-
----
-
-## 📦 Installation & Setup (Local)
+## 📸 Demo Credentials
 
 ```bash
-# Clone the repo
-git clone https://github.com/your-username/mini-linkedin-api
-cd mini-linkedin-api
+Email: toheni2145@foboxs.com
+Password: 12341234
 
-# Install dependencies
+🛠️ Tech Stack
+| Layer       | Technology                          |
+| ----------- | ----------------------------------- |
+| Frontend    | React, TailwindCSS, Vite            |
+| Backend     | Node.js, Express.js                 |
+| Database    | MongoDB + Mongoose                  |
+| Auth        | JWT, Bcrypt, Cookies                |
+| Email       | Brevo SMTP                          |
+| Uploads     | Multer + Cloudinary                 |
+| Docs        | Swagger / OpenAPI 3.0               |
+| Deployments | Render (backend), Vercel (frontend) |
+
+🚀 Getting Started Locally
+# 1. Clone Repo
+git clone https://github.com/souravxyz/proConnect
+cd proConnect
+
+# 2. Install Dependencies
 npm install
 
-# Copy and edit environment variables
+# 3. Set Environment Variables
 cp .env.example .env
 
-# Start server (dev mode)
+# 4. Run the server
 npm run dev
 
-Server runs at: http://localhost:6969
-Frontend can connect via: http://localhost:6969/api/
+Backend: http://localhost:6969
+Frontend: http://localhost:5173
 
-# Environment Variables 
+🧪 API Documentation
+Swagger UI:
+{backend-url}/api-docs
 
-MONGO_URI=your_mongodb_connection_string
-PORT=6969
-JWT_SECRET_KEY=your_jwt_secret
-JWT_EXPIRES_IN=30d
+🙌 Acknowledgements
 
-BASE_URL=http://localhost:6969
-CLIENT_URL=http://localhost:5173
+Inspired by LinkedIn UX
 
-EMAIL_SERVICE=brevo
-EMAIL_HOST=smtp-relay.brevo.com
-EMAIL_PORT=587
-EMAIL_USER=your_email_user
-EMAIL_PASS=your_email_pass
-EMAIL_FROM=your@email.com
+Mail service powered by Brevo SMTP
 
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+Image upload handled by Cloudinary
 
-DEFAULT_ROLE=user
+Hosting: Render & Vercel
 
+📬 Contact
+Made with ❤️ by Sourav Srivastava (https://github.com/souravxyz)
+Got feedback? Drop it in an : https://github.com/souravxyz/proConnect/issues!
