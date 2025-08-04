@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: A simple community platform like LinkedIn
 servers:
-  - url: http://localhost:6969
+  - url: https://proconnect-backend-7dxu.onrender.com
 
 tags:
   - name: Auth
