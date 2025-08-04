@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Toastify__toast {
+  @apply font-inter text-sm rounded-md shadow-sm;
+}
+.Toastify__toast--success {
+  @apply bg-green-50 text-green-700 border border-green-200;
+}
+.Toastify__toast--error {
+  @apply bg-red-50 text-red-700 border border-red-200;
+}
+
+/* Optional abstract background */
+body {
+  background-image: radial-gradient(
+    circle at 10% 20%,
+    rgba(0, 100, 255, 0.03) 0%,
+    transparent 20%
+  );
+}
